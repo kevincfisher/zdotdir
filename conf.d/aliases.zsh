@@ -33,6 +33,6 @@ alias isodate="date +%Y-%m-%dT%H:%M:%S%z"
 alias unixepoch="date +%s"
 
 # disk usage
-alias biggest="du -s ./* | sort -nr | awk '\''{print $2}'\'' | xargs du -sh"
+alias biggest='du -s ./* | sort -nr | awk '\''{print $2}'\'' | xargs du -sh'
 
 alias zshrc="$EDITOR $ZDOTDIR/.zshrc"

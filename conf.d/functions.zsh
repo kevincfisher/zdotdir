@@ -21,7 +21,6 @@ function noext {
   find . -not \( -path '*/.git/*' -prune \) -type f ! name '*.*'
 }
 
-
 function tailf {
   local nl
   tail -f $2 | while read j; do
