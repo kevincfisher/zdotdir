@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 # === ALIASES ===
-
-
 alias ping='ping -c 5'
 alias vi=vim
 alias nv=nvim
@@ -17,6 +15,13 @@ if (( ${+commands[eza]} )); then
     export EZA_CONFIG_DIR=${XDG_CONFIG_HOME:-$HOME/.config}/eza
 fi
 
+if (( ${+commands[zoxide]} )); then
+  alias cd=z
+  [[ -d ${XDG_DATA_HOME:-$HOME/.local/share} ]] && \
+    export ZO_DATA_DIR=${$XDG_DATA_HOME:-$HOME/.local/share}
+
+  eval "$(zoxide init zsh)"
+fi
 
 #tar
 alias tarls="tar -tvf"
@@ -31,4 +36,4 @@ alias unixepoch="date +%s"
 # disk usage
 alias biggest="du -s ./* | sort -nr | awk '\''{print $2}'\'' | xargs du -sh"
 
-alias zshrc="$EDITOR $ZDOTDIR/zsh/.zshrc"
+alias zshrc="$EDITOR $ZDOTDIR/.zshrc"

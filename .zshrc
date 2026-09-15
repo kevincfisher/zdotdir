@@ -9,4 +9,3 @@
 
 source $ZDOTDIR/lib/compinit.zsh
 source $ZDOTDIR/lib/confd.zsh
-
