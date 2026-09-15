@@ -18,5 +18,6 @@ export ZSH_DATA_HOME=${ZSH_DATA_HOME:-$XDG_DATA_HOME/zsh}
 export ZSH_STATE_HOME=${ZSH_STATE_HOME:-$XDG_STATE_HOME/zsh}
 
 if [[ ! -o LOGIN ]] && [[ -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
-  source "${$ZDOTDIR:-$HOME}/.zprofile"
+  source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+. "$HOME/.cargo/env"
