@@ -1,14 +1,15 @@
 #!/usr/bin/env zsh
 # === ALIASES ===
 alias ping='ping -c 5'
-alias vi=vim
+alias vim=nvim
 alias nv=nvim
 alias grep="${aliases[grep]:-grep} --exclude-dir={.git}"
 
 # files 
-alias ll="eza --color=always"
-
-
+alias ll='ls -lh'
+alias la='ls -lAh'
+alias lsa="ls -aG"
+alias ldot='ls -ld .*'
 if (( ${+commands[eza]} )); then
   alias ls=eza
   [[ -d ${XDG_CONFIG_HOME:-$HOME/.config}/eza ]] && \
@@ -17,6 +18,11 @@ fi
 
 if (( ${+commands[zoxide]} )); then
   alias cd=z
+  if [[ -z ${XDG_DATA_HOME:-$HOME/.local/share}/zoxide ]]; then
+    echo "creating zoxide data folder in $HOME/.local/share"
+    mkdir -p $HOME/.local/share/zoxide
+  fi
+
   [[ -d ${XDG_DATA_HOME:-$HOME/.local/share}/zoxide ]] && \
     export ZO_DATA_DIR=${XDG_DATA_HOME:-$HOME/.local/share}/zoxide
   eval "$(zoxide init zsh)"
