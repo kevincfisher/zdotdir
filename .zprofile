@@ -19,7 +19,7 @@ prepath=(
   $HOME/.local/bin(N)
 )
 
-path=($prepath $path)
+path=( $prepath $path )
 
 cdpath=(
   $XDG_PROJECTS_DIR(N/)

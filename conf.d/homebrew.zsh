@@ -14,7 +14,7 @@ if [[ -z "$HOMEBREW_PREFIX" ]]; then
 	source <($_brewcmd[1] shellenv)
 	unset _brewcmd
 	
-	path=($prepath path)
+	path=($prepath $path)
 fi
 
 HOMEBREW_NO_ANALTICS="${HOMEBREW_NO_ANALYTICS:-1}"
