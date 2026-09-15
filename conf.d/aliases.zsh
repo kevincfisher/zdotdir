@@ -17,9 +17,6 @@ fi
 
 if (( ${+commands[zoxide]} )); then
   alias cd=z
-  [[ -d ${XDG_DATA_HOME:-$HOME/.local/share} ]] && \
-    export ZO_DATA_DIR=${$XDG_DATA_HOME:-$HOME/.local/share}
-
   eval "$(zoxide init zsh)"
 fi
 
