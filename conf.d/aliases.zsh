@@ -31,4 +31,4 @@ alias unixepoch="date +%s"
 # disk usage
 alias biggest="du -s ./* | sort -nr | awk '\''{print $2}'\'' | xargs du -sh"
 
-alias zshrc="$EDITOR $ZDOTDIR/zsh/.zshrc
+alias zshrc="$EDITOR $ZDOTDIR/zsh/.zshrc"

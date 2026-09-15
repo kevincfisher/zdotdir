@@ -44,7 +44,7 @@ brew leaves | xargs brew deps --installed --for-each | awk "$bluify deps"
 }
 
 # handle systems with multiple users
-if [[ "$HOMEBREW_PREFIX == opt/homebrew ]]; then
+if [[ "$HOMEBREW_PREFIX" == opt/homebrew ]]; then
 	_brew_mine=("$HOMEBREW_PREFIX"(N/u$UID))
 	if (( ! $#_brew_mine )); then
 		zmodload -F zsh/stat b:zstat
