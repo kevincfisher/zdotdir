@@ -20,3 +20,6 @@ export ZSH_STATE_HOME=${ZSH_STATE_HOME:-$XDG_STATE_HOME/zsh}
 if [[ ! -o LOGIN ]] && [[ -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+# Per-machine overrides (gitignored). e.g. `export WORK_MACHINE=1` on work laptops.
+[[ -s "${ZDOTDIR:-$HOME}/.zshenv.local" ]] && source "${ZDOTDIR:-$HOME}/.zshenv.local"
