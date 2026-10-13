@@ -11,3 +11,5 @@ source $ZDOTDIR/lib/confd.zsh
 
 if [[ -r "$HOME/.local/share/deja/init.zsh" ]]; then source "$HOME/.local/share/deja/init.zsh"; else eval "$(deja init zsh)"; fi
 eval "$($(which zsh-patina) activate)"
+
+source $ZDOTDIR/lib/after.zsh
